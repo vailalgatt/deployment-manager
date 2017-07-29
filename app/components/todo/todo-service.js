@@ -1,5 +1,5 @@
 function TodoService(){
-	this.getTodos =  function(){
+	this.getTodos =  function(todo){
 		var t = localStorage.getItem('todo');
 		if(t){
 			console.log('Todo Data:', JSON.parse(t))
