@@ -17,35 +17,52 @@
             </div>
 
             <div class="col-xs-6">
-                <h2>This is where the resource guide goes</h2>
+                <h2>List Group With Custom Content</h2>
+                <div class="list-group">
+                    <a href="#" class="list-group-item">
+                        <h4 class="list-group-item-heading">First List Group Item Heading</h4>
+                        <p class="list-group-item-text">List Group Item Text</p>
+                    </a>
+                    <a href="#" class="list-group-item">
+                        <h4 class="list-group-item-heading">Second List Group Item Heading</h4>
+                        <p class="list-group-item-text">List Group Item Text</p>
+                    </a>
+                    <a href="#" class="list-group-item">
+                        <h4 class="list-group-item-heading">Third List Group Item Heading</h4>
+                        <p class="list-group-item-text">List Group Item Text</p>
+                    </a>
+                </div>
             </div>
 
             <div class="col-xs-6">
-                <h2>This is where the todo list goes</h2>
+                <form onsubmit="app.controllers.todoController.addTodoFromForm(event)">
+                    <h3>Your Todo List: (<span id="num-items"></span>):</h3>
+                    <input type="text" name="todo" id="todo" placeholder="Task here + Enter...">
+                </form>
+                <div id="todoHere"></div>
             </div>
             <p></p>
         </div>
     </div>
 
 
-		<!--JS Libraries-->
-		<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-		<!--Services-->
-		<script src="app/components/weather/weather-service.js"></script>
-		<script src="app/components/image/image-service.js"></script>
-		<script src="app/components/todo/todo-service.js"></script>
-		<script src="app/components/clock/clock-service.js"></script>
+    <!--JS Libraries-->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <!--Services-->
+    <script src="app/components/weather/weather-service.js"></script>
+    <script src="app/components/image/image-service.js"></script>
+    <script src="app/components/todo/todo-service.js"></script>
+    <script src="app/components/clock/clock-service.js"></script>
 
-		<!--Controllers-->
-		<script src="app/components/weather/weather-controller.js"></script>
-		<script src="app/components/image/image-controller.js"></script>
-		<script src="app/components/todo/todo-controller.js"></script>
-		<script src="app/components/clock/clock-controller.js"></script>
+    <!--Controllers-->
+    <script src="app/components/weather/weather-controller.js"></script>
+    <script src="app/components/image/image-controller.js"></script>
+    <script src="app/components/todo/todo-controller.js"></script>
+    <script src="app/components/clock/clock-controller.js"></script>
 
-		<!--Initialize App-->
-		<script src="app/init.js"></script>
+    <!--Initialize App-->
+    <script src="app/init.js"></script>
 
-    </script>
 </body>
 
 </html>
