@@ -1,11 +1,9 @@
 function TodoController() {
-
 	var todoService = new TodoService()
 
 	this.addTodoFromForm = function (e) {
 		e.preventDefault();
 		var form = e.target;
-
 		todosArray = todoService.getTodos(form.todo.value)
 		todosArray.push(form.todo.value);
 
