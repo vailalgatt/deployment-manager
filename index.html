@@ -13,12 +13,22 @@
 <body>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-xs-12">
+            <div class="col-xs-6">
                 <div id="clock" class="clock"></div>
             </div>
-            <div class="col-xs-12">
+            <div class="col-xs-6">
                 <div id="weather"></div>
             </div>
+
+            <!--Will be user input for deployed person information-->
+            <!-- <div class="col-xs-6">
+                <div id="clock" class="clock"></div>
+            </div>
+            <div class="col-xs-6">
+                <div id="weather"></div>
+            </div> -->
+
+            <!--Need to add user input, not a default clock  -->
             <div class="col-xs-12">
                 <h1>Countdown Clock</h1>
                 <div id="clockdiv">
@@ -40,36 +50,55 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div id="resources" class="col-xs-6">
-            <h2>Helpful Reading Materials</h2>
-            <div class="list-group">
-                <a href="https://www.thespruce.com/pre-deployment-family-tips-2357147" class="list-group-item">Before Your Spouse Deploys</a>
-                <a href="http://www.military.com/spouse/military-deployment/dealing-with-deployment/preparing-for-family-member-deployment.html"
-                    class="list-group-item">Dealing with deployment</a>
-                <a href="http://militaryspouse.com/military-life/deployment/dont-put-your-life-on-hold/" class="list-group-item">Don't Put Your Life on Hold</a>
-                <a href="http://marriedtothearmy.com/dealing-with-the-emotional-roller-coaster-of-deployment/" class="list-group-item">Dealing with the Emotional Roller Coaster of Deployment</a>
-                <a href="http://jomygosh.com/2015/04/16-homecoming-tips-from-military-spouses-who-keep-it-real/" class="list-group-item">16 HOMECOMING TIPS FROM MILITARY SPOUSES WHO KEEP IT REAL</a>
-                <a href="http://militaryspouse.com/military-life/homecoming/5-things-no-one-ever-told-me-about-homecoming/" class="list-group-item">5 Things No One Ever Told Me About Homecoming</a>
-                <a href="https://hiremadskills.com/military-spouse-3-steps-new-career-tech/" class="list-group-item">Military Spouse: 3 Steps to a New Career in Tech</a>
-            </div>
-        </div>
 
-        <div id="list" class="col-xs-6">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h5 class="panel-title">To Do List:</h5>
-                </div>
-                <div class="panel-body">
-                    <form onsubmit="app.controllers.todoController.addTodoFromForm(event)">
-                        <input type="text" name="todo" id="todo" placeholder="Add an Item" required/>
-                    </form>
-                    <div id="todoList">
+            <!--will be managed by the user differently upon creation-->
+            <div id="list" class="col-xs-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h5 class="panel-title">Reminders:</h5>
+                    </div>
+                    <div class="panel-body">
+                        <form onsubmit="app.controllers.todoController.addTodoFromForm(event)">
+                            <input type="text" name="todo" id="todo" placeholder="Add an Item" required/>
+                        </form>
+                        <div id="todoList">
+                        </div>
                     </div>
                 </div>
             </div>
+
+            <!--Need data to be persistant  -->
+            <div id="list" class="col-xs-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h5 class="panel-title">To Do List:</h5>
+                    </div>
+                    <div class="panel-body">
+                        <form onsubmit="app.controllers.todoController.addTodoFromForm(event)">
+                            <input type="text" name="todo" id="todo" placeholder="Add an Item" required/>
+                        </form>
+                        <div id="todoList">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Possible toggleable sidebar? -->
+            <div id="resources" class="col-xs-12">
+                <h2>Helpful Reading Materials</h2>
+                <div class="list-group">
+                    <a href="https://www.thespruce.com/pre-deployment-family-tips-2357147" class="list-group-item">Before Your Spouse Deploys</a>
+                    <a href="http://www.military.com/spouse/military-deployment/dealing-with-deployment/preparing-for-family-member-deployment.html"
+                        class="list-group-item">Dealing with deployment</a>
+                    <a href="http://militaryspouse.com/military-life/deployment/dont-put-your-life-on-hold/" class="list-group-item">Don't Put Your Life on Hold</a>
+                    <a href="http://marriedtothearmy.com/dealing-with-the-emotional-roller-coaster-of-deployment/" class="list-group-item">Dealing with the Emotional Roller Coaster of Deployment</a>
+                    <a href="http://jomygosh.com/2015/04/16-homecoming-tips-from-military-spouses-who-keep-it-real/" class="list-group-item">16 HOMECOMING TIPS FROM MILITARY SPOUSES WHO KEEP IT REAL</a>
+                    <a href="http://militaryspouse.com/military-life/homecoming/5-things-no-one-ever-told-me-about-homecoming/" class="list-group-item">5 Things No One Ever Told Me About Homecoming</a>
+                    <a href="https://hiremadskills.com/military-spouse-3-steps-new-career-tech/" class="list-group-item">Military Spouse: 3 Steps to a New Career in Tech</a>
+                </div>
+            </div>
+
         </div>
-    </div>
     </div>
 
 
