@@ -97,13 +97,13 @@
             <div id="list" class="col-xs-6">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h5 class="panel-title">Reminders:</h5>
+                        <h5 class="panel-title" id="reminderStyle">Reminders:</h5>
                     </div>
                     <div class="panel-body">
                         <form onsubmit="app.controllers.todoController.addTodoFromForm(event)">
                             <input type="text" name="todo" id="todo" placeholder="Add an Item" required/>
                         </form>
-                        <div id="todoList">
+                        <div id="reminderList">
                         </div>
                     </div>
                 </div>
@@ -113,7 +113,7 @@
             <div id="list" class="col-xs-6">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h5 class="panel-title">To Do List:</h5>
+                        <h5 class="panel-title" id="todoStyle">To Do List:</h5>
                     </div>
                     <div class="panel-body">
                         <form onsubmit="app.controllers.todoController.addTodoFromForm(event)">
