@@ -13,9 +13,9 @@ function WeatherController(){
 		var template =``
 		var elem = document.getElementById("weather");
 		if (fTemp == true){
-			template = `<h3>The temperature in ${weatherService.weather.name} is <a href="#" id="toggle-temp">${(weatherService.weather.main.temp *(9/5) - 459.67).toFixed(1) + "°F"}</a></h3>`
+			template = `<p>The temperature in ${weatherService.weather.name} is <a href="#" id="toggle-temp">${(weatherService.weather.main.temp *(9/5) - 459.67).toFixed(1) + "°F"}</a></p>`
 		}else{
-			template = `<h3>The temperature in ${weatherService.weather.name} is <a href="#" id="toggle-temp">${(weatherService.weather.main.temp - 273.15).toFixed(1) + "°C"}</a></h3>`
+			template = `<p>The temperature in ${weatherService.weather.name} is <a href="#" id="toggle-temp">${(weatherService.weather.main.temp - 273.15).toFixed(1) + "°C"}</a></p>`
 		}
 		
 	elem.innerHTML = template
