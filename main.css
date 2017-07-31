@@ -50,3 +50,7 @@ h1 {
 #list {
   padding: 25px;
 }
+
+.dropdown-menu li a:hover {
+  border: solid thin;
+}
