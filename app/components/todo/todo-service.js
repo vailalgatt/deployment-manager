@@ -1,5 +1,6 @@
 function TodoService(){
-	this.getTodos =  function(todo){
+	//This service is all setup for you no edits necessary here
+	this.getTodos =  function(){
 		var t = localStorage.getItem('todo');
 		if(t){
 			console.log('Todo Data:', JSON.parse(t))
@@ -10,6 +11,7 @@ function TodoService(){
 	}
 	
 	this.saveTodos =  function(todos){
+				//^^^ Less typical but todos should always be the entire array
 		localStorage.setItem('todo', JSON.stringify(todos));
 		console.log('Todo Data Saved:', todos);
 	}

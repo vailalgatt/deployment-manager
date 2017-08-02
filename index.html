@@ -94,7 +94,7 @@
             </div>
 
             <!--will need to be managed by the user differently upon creation of reminder-->
-            <div id="list" class="col-xs-6">
+             <div id="list" class="col-xs-6">
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h5 class="panel-title" id="reminderStyle">Reminders:</h5>
@@ -107,19 +107,18 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> 
 
-            <!--Need data to be persistant  -->
             <div id="list" class="col-xs-6">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h5 class="panel-title" id="todoStyle">To Do List:</h5>
+                        <h5 class="panel-title" id="todoStyle">To Do List: (<span id="num-items"></span>):</h5>
                     </div>
                     <div class="panel-body">
                         <form onsubmit="app.controllers.todoController.addTodoFromForm(event)">
                             <input type="text" name="todo" id="todo" placeholder="Add an Item" required/>
                         </form>
-                        <div id="todoList">
+                        <div id="todoHere">
                         </div>
                     </div>
                 </div>

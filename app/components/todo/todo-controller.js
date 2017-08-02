@@ -2,45 +2,42 @@ function TodoController() {
 	var todoService = new TodoService()
 
 	this.addTodoFromForm = function (e) {
-		e.preventDefault();
-		var form = e.target;
-		todosArray = todoService.getTodos(form.todo.value)
-		todosArray.push(form.todo.value);
+		e.preventDefault()
+		var form = e.target
+		var todos = todoService.getTodos()
+		todos.push(form.todo.value)
 
-		todoService.saveTodos(todosArray);
 
-		drawTodos(todosArray)
-		form.todo.value = "";
+
+		todoService.saveTodos(todos)
+		draw()
 	}
 
-	function drawTodos(data) {
-		var elem = document.getElementById("todoList");
-		var template = "";
-		var itemTemplate = "";
-		for (var i = 0; i < data.length; i++) {
-			var item = data[i];
-			template += `
-					<p class="item">${item} <button type="button" onclick="app.controllers.todoController.uncheck('${item}')">X</button></p>
-				`
-		}
+	function deleteTodo() {
+        var id = this.getAttribute('id');
+        var todos = todoService.getTodos();
+        todos.splice(id, 1);
+        todoService.saveTodos(todos);
+        draw();
+        return false;
+    }
 
-		if (data.length > 0) {
-			var items = data.length;
-			itemTemplate = `
-			<h5>Items: ${items}</h5>`
-		}
-
-		return elem.innerHTML = template + itemTemplate;
-	}
-
-	this.uncheck = function uncheck(item) {
-		for (var i = 0; i < todosArray.length; i++) {
-			var todo = todosArray[i]
-			if(item == todo) {
-				todosArray.splice(todo, 1);
-			}
-		}
-		todoService.saveTodos(todosArray);
-		drawTodos(todosArray);
-	}
+    function draw() {
+        var todos = todoService.getTodos();
+		var items = todos.length
+		document.getElementById("num-items").innerText = items
+        
+		var template = '<ul>';
+        for (var i = 0; i < todos.length; i++) {
+            template += '<li>' + todos[i] + ' <button class="remove" id="' + i + '">x</button></li>';
+        };
+        template += '</ul>';
+        document.getElementById('todoHere').innerHTML = template;
+        var buttons = document.getElementsByClassName('remove');
+        for (var i = 0; i < buttons.length; i++) {
+            buttons[i].addEventListener('click', deleteTodo);
+        };
+			
+    }
+    draw();
 }
