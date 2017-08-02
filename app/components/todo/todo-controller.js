@@ -27,11 +27,11 @@ function TodoController() {
 		var items = todos.length
 		document.getElementById("num-items").innerText = items
         
-		var template = '<ul>';
+		var template = '';
         for (var i = 0; i < todos.length; i++) {
-            template += '<li>' + todos[i] + ' <button class="remove" id="' + i + '">x</button></li>';
+            template += '<p>' + todos[i] + ' <button class="remove" id="' + i + '">x</button></p>';
         };
-        template += '</ul>';
+        template += ' ';
         document.getElementById('todoHere').innerHTML = template;
         var buttons = document.getElementsByClassName('remove');
         for (var i = 0; i < buttons.length; i++) {

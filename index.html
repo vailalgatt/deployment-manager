@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="main.min.css">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Merriweather" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="clock_assets/flipclock.css" />
     <title>Document</title>
 </head>
 
@@ -92,27 +93,12 @@
                     </div>
                 </div>
             </div>
-
-            <!--will need to be managed by the user differently upon creation of reminder-->
-             <div id="list" class="col-xs-6">
+ 
+            <!--todo list data output managed for both reminders & todos?  -->
+            <div id="list" class="col-xs-12">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h5 class="panel-title" id="reminderStyle">Reminders:</h5>
-                    </div>
-                    <div class="panel-body">
-                        <form onsubmit="app.controllers.todoController.addTodoFromForm(event)">
-                            <input type="text" name="todo" id="todo" placeholder="Add an Item" required/>
-                        </form>
-                        <div id="reminderList">
-                        </div>
-                    </div>
-                </div>
-            </div> 
-
-            <div id="list" class="col-xs-6">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h5 class="panel-title" id="todoStyle">To Do List: (<span id="num-items"></span>):</h5>
+                        <h5 class="panel-title" id="todoStyle">To Do List(<span id="num-items"></span>):</h5>
                     </div>
                     <div class="panel-body">
                         <form onsubmit="app.controllers.todoController.addTodoFromForm(event)">
