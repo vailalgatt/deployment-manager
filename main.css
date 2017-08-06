@@ -100,3 +100,17 @@ h1 {
   font-family: 'Merriweather', serif;
   font-size: 15px;
 }
+
+h3 {
+  font-size: 25px;
+  font-family: 'Merriweather', serif;
+  color: red;
+  text-align: center;
+  padding: 25px;
+}
+
+.quote:hover {
+  display: block;
+  color: red;
+  font-weight: bold;
+}

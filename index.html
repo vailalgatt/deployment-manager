@@ -25,7 +25,8 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-                <a class="navbar-brand" href=""><div id="quote">Deployment Manager</div></a>
+                <a class="navbar-brand" href="">Deployment Manager
+                </a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -39,9 +40,12 @@
                                     class="">Dealing with deployment</a></li>
                             <li><a href="http://militaryspouse.com/military-life/deployment/dont-put-your-life-on-hold/" class="">Don't Put Your Life on Hold</a></li>
                             <!-- <li role="separator" class="divider"></li> -->
-                            <li><a href="http://marriedtothearmy.com/dealing-with-the-emotional-roller-coaster-of-deployment/" class="">Dealing with the Emotional Roller Coaster of Deployment</a></li>
-                            <li><a href="http://jomygosh.com/2015/04/16-homecoming-tips-from-military-spouses-who-keep-it-real/" class="">16 HOMECOMING TIPS FROM MILITARY SPOUSES WHO KEEP IT REAL</a></li>
-                            <li><a href="http://militaryspouse.com/military-life/homecoming/5-things-no-one-ever-told-me-about-homecoming/" class="">5 Things No One Ever Told Me About Homecoming</a></li>
+                            <li><a href="http://marriedtothearmy.com/dealing-with-the-emotional-roller-coaster-of-deployment/"
+                                    class="">Dealing with the Emotional Roller Coaster of Deployment</a></li>
+                            <li><a href="http://jomygosh.com/2015/04/16-homecoming-tips-from-military-spouses-who-keep-it-real/"
+                                    class="">16 HOMECOMING TIPS FROM MILITARY SPOUSES WHO KEEP IT REAL</a></li>
+                            <li><a href="http://militaryspouse.com/military-life/homecoming/5-things-no-one-ever-told-me-about-homecoming/"
+                                    class="">5 Things No One Ever Told Me About Homecoming</a></li>
                             <li><a href="https://hiremadskills.com/military-spouse-3-steps-new-career-tech/" class="">Military Spouse: 3 Steps to a New Career in Tech</a></li>
                         </ul>
                     </li>
@@ -54,10 +58,15 @@
 
     <div class="container-fluid">
         <div class="row">
-            <div class="col-xs-6">
+            <div class="col-xs-4">
                 <div id="clock" class="clock"></div>
             </div>
-            <div class="col-xs-6">
+
+            <div class="col-xs-4">
+                <div id="quote" class="quote"><h3>Get Inspired</h3></div>
+            </div>            
+
+            <div class="col-xs-4">
                 <div id="weather" class="weather"></div>
             </div>
 
@@ -93,7 +102,7 @@
                     </div>
                 </div> -->
             </div>
- 
+
             <!--todo list data output managed for both reminders & todos?  -->
             <div id="list" class="col-xs-12">
                 <div class="panel panel-default">
@@ -120,12 +129,14 @@
     <!--Services-->
     <script src="app/components/weather/weather-service.js"></script>
     <script src="app/components/todo/todo-service.js"></script>
+    <script src="app/components/quote/quote-service.js"></script>
 
     <!--Controllers-->
     <script src="app/components/countdown/countdown-controller.js"></script>
     <script src="app/components/weather/weather-controller.js"></script>
     <script src="app/components/todo/todo-controller.js"></script>
     <script src="app/components/clock/clock-controller.js"></script>
+    <script src="app/components/quote/quote-controller.js"></script>
 
     <!--Initialize App-->
     <script src="app/init.js"></script>
